@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+}
+
+@font-face {
+    font-family: clockFont;
+    src: url(DS-DIGI.TTF);
+  }
+
+#hours {
+    color: white;
+    font-size: 60pt;
+    font-family: clockFont;
+}
+
+#chronotimer {
+    text-align: center;
+    color: white;
+    font-size: 60pt;
+    font-family: clockFont;
+}
+
+#chronotime {
+    text-align: center;
+    color: white;
+    font-size: 60pt;
+    font-family: clockFont;
+}
+
+#hoursWrapper {
+    margin-top: 25vh;
+}
+
+#table {
+    background-color: #e9ecef;
+    border-radius: .25rem;
+    border: 0px !important;
+}
+
+td {
+    padding: .5rem;
+}
