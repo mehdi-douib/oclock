@@ -1,4 +1,4 @@
-// Current date/time
+// Date/heure actuelle
 function now() {
     setInterval(() => {
         today = new Date();
@@ -16,7 +16,7 @@ function now() {
     }, 500);
 }
 
-// clock
+// horloge
 function clock() {
     setInterval(() => {
         $("#hours").text(h + ":" + m + ":" + s);
@@ -24,11 +24,11 @@ function clock() {
 }
 // $("#b_hours").click(clock);
 
-// alarm
+// alarme
 arr = [];
 function alarm() {
     $("#add_alarm").click(() => {
-        // User data
+        //   Données de l’utilisateur
         let time = $('#set_alarm').val();
         let msg = $('#msg').val();
         console.log(time, msg);
@@ -44,7 +44,7 @@ function alarm() {
     })
 
     setInterval(() => {
-        // Display table 
+        //Tableau d’affichage 
         $('#alarm_table').empty();
         $.each(arr, function (index, value) {
             if (value[2] > 0) {
@@ -57,7 +57,7 @@ function alarm() {
             $('#alarm_table').append('<tr><td>' + value[0] + '</td><td>' + value[1] + '</td><td>' + show + '</td></tr>');
         });
     }, 1000);
-    // Display alert
+    //   Afficher l’alerte
     setInterval(() => {
         for (i = 0; i < arr.length; i++) {
             temp = arr[i][0] + ':00';

@@ -27,7 +27,7 @@ function chrono(){
 	document.getElementById("chronotimer").innerHTML = hr + ":" + min + ":" + sec + ":" + msec
 	timerID = setTimeout("chrono()", 10)
 }
-//start timer 
+//minuterie de démarrage 
 function chronoStart(){
 	document.chronoForm.startstop.value = "stop!"
 	document.chronoForm.startstop.onclick = chronoStop
@@ -35,7 +35,7 @@ function chronoStart(){
 	start = new Date()
 	chrono()
 }
-//when on pause relaunhc timer
+//En cas de pause, minuterie Relaunhc
 function chronoContinue(){
 	document.chronoForm.startstop.value = "stop!"
 	document.chronoForm.startstop.onclick = chronoStop
@@ -44,28 +44,28 @@ function chronoContinue(){
 	start = new Date(start)
 	chrono()
 }
-//reset timer 0:00:00:000
+//Réinitialiser le minuteur 0:00:00:000
 function chronoReset(){
 	document.getElementById("chronotimer").innerHTML = "0:00:00:000"
     start = new Date()
     $("#tours").empty();
     lap =0;
 }
-// when stop ON reset timer 0:00:00:000
+//lorsque stop ON réinitialiser la minuterie 0:00:00:000
 function chronoStopReset(){
 	document.getElementById("chronotimer").innerHTML = "0:00:00:000"
     document.chronoForm.startstop.onclick = chronoStart
     $("#tours").empty();
     lap = 0;
 }
-// STOP/RELAUNCH timer
+// Minuterie d’arrêt/relancement
 function chronoStop(){
 	document.chronoForm.startstop.value = "start!"
 	document.chronoForm.startstop.onclick = chronoContinue
 	document.chronoForm.reset.onclick = chronoStopReset
 	clearTimeout(timerID)
 }
-// nbr laps
+// Tours NBR
 function laptimer(){
     lap = lap+1;
     laps = document.getElementById("chronotimer").innerHTML;
