@@ -39,7 +39,7 @@
                             <td>Status</td>
                         </tr>
                     </thead>
-                    <tbody id="alarm_table">
+                    <tbody id="alarm_table"> 
                     </tbody>
                 </table>
             </div>
